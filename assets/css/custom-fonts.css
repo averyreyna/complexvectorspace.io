@@ -79,7 +79,6 @@ body,
 .footer,
 .post-meta,
 .breadcrumbs,
-.terms-tags a,
 #menu a,
 #searchbox input,
 #searchResults li {
@@ -115,7 +114,7 @@ body {
   --border: rgb(232, 232, 232);
 }
 
-/* List pages (home, posts index, archives, tags, etc.) use same stark white as theme */
+/* List pages (home, posts index, archives, etc.) use same stark white as theme */
 body.list,
 .list {
   background: var(--theme);

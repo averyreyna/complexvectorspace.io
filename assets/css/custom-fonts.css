@@ -1,0 +1,138 @@
+/* ABC Favorit Condensed – body text */
+@font-face {
+  font-family: "ABC Favorit Condensed";
+  src: url("../fonts/ABC%20Favorit%20Condensed/ABCFavoritCondensed-Regular-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Favorit%20Condensed/ABCFavoritCondensed-Regular-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Favorit%20Condensed/ABCFavoritCondensed-Regular-Trial.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABC Favorit Condensed";
+  src: url("../fonts/ABC%20Favorit%20Condensed/ABCFavoritCondensed-Book-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Favorit%20Condensed/ABCFavoritCondensed-Book-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Favorit%20Condensed/ABCFavoritCondensed-Book-Trial.otf") format("opentype");
+  font-weight: 350;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABC Favorit Condensed";
+  src: url("../fonts/ABC%20Favorit%20Condensed/ABCFavoritCondensed-Medium-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Favorit%20Condensed/ABCFavoritCondensed-Medium-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Favorit%20Condensed/ABCFavoritCondensed-Medium-Trial.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABC Favorit Condensed";
+  src: url("../fonts/ABC%20Favorit%20Condensed/ABCFavoritCondensed-Bold-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Favorit%20Condensed/ABCFavoritCondensed-Bold-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Favorit%20Condensed/ABCFavoritCondensed-Bold-Trial.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ABC Favorit Mono – headings */
+@font-face {
+  font-family: "ABC Favorit Mono";
+  src: url("../fonts/ABC%20Favorit%20Mono/ABCFavoritMono-Regular-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Favorit%20Mono/ABCFavoritMono-Regular-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Favorit%20Mono/ABCFavoritMono-Regular-Trial.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABC Favorit Mono";
+  src: url("../fonts/ABC%20Favorit%20Mono/ABCFavoritMono-Medium-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Favorit%20Mono/ABCFavoritMono-Medium-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Favorit%20Mono/ABCFavoritMono-Medium-Trial.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABC Favorit Mono";
+  src: url("../fonts/ABC%20Favorit%20Mono/ABCFavoritMono-Bold-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Favorit%20Mono/ABCFavoritMono-Bold-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Favorit%20Mono/ABCFavoritMono-Bold-Trial.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Body and prose: condensed */
+body,
+.entry-content,
+.post-content,
+.archive-meta,
+.archive-count,
+.footer,
+.post-meta,
+.breadcrumbs,
+.terms-tags a,
+#menu a,
+#searchbox input,
+#searchResults li {
+  font-family: "ABC Favorit Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Headings and UI labels: mono */
+h1, h2, h3, h4, h5, h6,
+.entry-header,
+.page-header h1,
+.post-title,
+.archive-year-header,
+.archive-month-header,
+.archive-entry-title,
+.logo a,
+.copy-code,
+.pagination a,
+.button-inner {
+  font-family: "ABC Favorit Mono", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, monospace;
+}
+
+/* Light theme only – starker white with clear contrast */
+body.dark,
+body {
+  --theme: #ffffff;
+  --entry: #ffffff;
+  --primary: rgb(18, 18, 18);
+  --secondary: rgb(72, 72, 72);
+  --tertiary: rgb(200, 200, 200);
+  --content: rgb(22, 22, 22);
+  --hljs-bg: rgb(24, 25, 28);
+  --code-bg: rgb(248, 248, 248);
+  --border: rgb(232, 232, 232);
+}
+
+/* List pages (home, posts index, archives, tags, etc.) use same stark white as theme */
+body.list,
+.list {
+  background: var(--theme);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root,
+  body,
+  body.dark {
+    --theme: #ffffff;
+    --entry: #ffffff;
+    --primary: rgb(18, 18, 18);
+    --secondary: rgb(72, 72, 72);
+    --tertiary: rgb(200, 200, 200);
+    --content: rgb(22, 22, 22);
+    --hljs-bg: rgb(24, 25, 28);
+    --code-bg: rgb(248, 248, 248);
+    --border: rgb(232, 232, 232);
+  }
+}

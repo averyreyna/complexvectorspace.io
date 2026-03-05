@@ -1,4 +1,36 @@
+# editor / temp
 *~
-.dropbox
+*.swp
+*.swo
+*.sublime-*
+
+# os
 .DS_Store
+Thumbs.db
+.dropbox
 Icon*
+
+# dependencies
+node_modules/
+
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# environment
+.env
+.env.local
+.env.*.local
+
+# build / output
+dist/
+build/
+out/
+.cache/
+
+# ide
+.idea/
+*.iml
+.turbo

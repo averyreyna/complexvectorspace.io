@@ -100,6 +100,17 @@ h1, h2, h3, h4, h5, h6,
   font-family: "ABC Favorit Mono", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, monospace;
 }
 
+/* ABC Favorit OpenType alternates (see https://abcdinamo.com/typefaces/favorit)
+   ss01: alternate a (single-storey) | ss02: alternate g | ss03: alternate r
+   ss04: alternate y | ss05: alternate & | ss06: alternate ? | onum: oldstyle figures */
+body,
+.font-diatype,
+.main-heading-semi-mono,
+.section-heading-semi-mono,
+.announcement-title {
+  font-feature-settings: "ss01" 1, "ss02" 1, "ss03" 1, "ss04" 1, "ss05" 1, "ss06" 1, "onum" 1;
+}
+
 /* Light theme only – starker white with clear contrast */
 body.dark,
 body {
@@ -111,7 +122,7 @@ body {
   --content: rgb(22, 22, 22);
   --hljs-bg: rgb(24, 25, 28);
   --code-bg: rgb(248, 248, 248);
-  --border: rgb(232, 232, 232);
+  --border: rgb(200, 200, 200);
 }
 
 /* List pages (home, posts index, archives, etc.) use same stark white as theme */
@@ -132,6 +143,97 @@ body.list,
     --content: rgb(22, 22, 22);
     --hljs-bg: rgb(24, 25, 28);
     --code-bg: rgb(248, 248, 248);
-    --border: rgb(232, 232, 232);
+    --border: rgb(200, 200, 200);
   }
+}
+
+/* Compact home: less gap between intro/social and first post cards */
+.main .first-entry.home-info {
+  margin-bottom: 0.35rem;
+}
+.main .first-entry.home-info .entry-content {
+  margin-bottom: 0;
+}
+.main .first-entry.home-info .entry-footer {
+  margin-top: 0.35rem;
+}
+.main .post-entry {
+  margin-top: 0.4rem;
+}
+.main .post-entry:first-of-type {
+  margin-top: 0.25rem;
+}
+/* Tighter padding inside post cards */
+.main .post-entry .entry-header {
+  margin-bottom: 0.25em;
+}
+.main .post-entry .entry-content {
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+.main .post-entry .entry-footer {
+  margin-top: 0;
+  padding-top: 0.35em;
+  text-align: right;
+}
+
+/* Text justify and snug line height across content */
+.main .entry-content,
+.main .entry-content p,
+.post-content,
+.post-content p,
+.main p {
+  text-align: justify;
+  line-height: 1.375;
+}
+.post-meta,
+.entry-footer,
+.archive-meta {
+  line-height: 1.375;
+}
+
+/* Nav: constrain to same content width as .main and .footer */
+.nav {
+  max-width: calc(var(--main-width) + var(--gap) * 2);
+}
+
+.logo-switches {
+  display: none !important;
+}
+
+#menu li + li {
+  margin-inline-start: 0.5rem;
+}
+
+/* Hide CVS logo on single post pages (body has no .list class) */
+body:not(.list) .logo {
+  display: none;
+}
+
+/* Post cards: less rounded, darker border, compact padding */
+.main .post-entry {
+  border-radius: 4px;
+  border-color: rgb(160, 160, 160);
+  padding: 0.6rem 0.85rem;
+}
+
+/* Footer: copyright left, powered-by right */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Font Awesome social icons: size and color to match theme */
+.social-icons a {
+  color: var(--primary);
+}
+.social-icons a:hover {
+  color: var(--secondary);
+}
+.social-icons .fa-solid,
+.social-icons .fa-brands {
+  font-size: 1.25rem;
 }

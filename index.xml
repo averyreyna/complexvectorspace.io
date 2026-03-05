@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Lil&#39;Log</title>
-    <link>https://lilianweng.github.io/</link>
+    <link>/</link>
     <description>Recent content on Lil&#39;Log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://lilianweng.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Prompt Engineering</title>
-      <link>https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/</link>
+      <link>/posts/2023-03-15-prompt-engineering/</link>
       <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/</guid>
+      <guid>/posts/2023-03-15-prompt-engineering/</guid>
       <description>Prompt Engineering, also known as In-Context Prompting, refers to methods for how to communicate with LLM to steer its behavior for desired outcomes without updating the model weights.</description>
     </item>
     <item>
       <title>An Overview of Deep Learning for Curious People</title>
-      <link>https://lilianweng.github.io/posts/2017-06-21-overview/</link>
+      <link>/posts/2017-06-21-overview/</link>
       <pubDate>Wed, 21 Jun 2017 00:00:00 +0000</pubDate>
-      <guid>https://lilianweng.github.io/posts/2017-06-21-overview/</guid>
+      <guid>/posts/2017-06-21-overview/</guid>
       <description>An overview of deep learning for curious people. AlphaGo, CNNs, RNNs, autoencoders, GANs, reinforcement learning.</description>
     </item>
   </channel>

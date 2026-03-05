@@ -1,3 +1,3 @@
 # complexvectorspace.io
 
-My always-changing blog
+My always-changing blog.

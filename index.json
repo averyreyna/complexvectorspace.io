@@ -1,4 +1,8 @@
 [
-  {"title":"Prompt Engineering","permalink":"/posts/2023-03-15-prompt-engineering/","content":"Prompt Engineering, also known as In-Context Prompting, refers to methods for how to communicate with LLM to steer its behavior for desired outcomes without updating the model weights."},
-  {"title":"An Overview of Deep Learning for Curious People","permalink":"/posts/2017-06-21-overview/","content":"An overview of deep learning. AlphaGo, convolutional neural networks, recurrent neural networks, autoencoders, GANs, reinforcement learning."}
+  {
+    "title": "Redesigning Convoy",
+    "permalink": "/posts/2025-03-05-redesigning-convoy/",
+    "content": "This project was initially started as a personal investigation into alternative environments for data manipulation. Since the target audience for this type of tool is broad, ranging from novices needing assistance to experts who can traverse an IDE with minimal effort, I knew I had to scope out my work to fit a particular use case. As an undergraduate, I interned at the Council on Foreign Relations and was introduced to the world of data visualization, specifically within the newsroom.…",
+    "date": "March 5, 2025"
+  }
 ]

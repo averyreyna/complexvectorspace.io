@@ -2,9 +2,11 @@
   "name": "complexvectorspace.io",
   "private": true,
   "scripts": {
-    "serve": "serve . -l 3000"
+    "serve": "serve . -l 3000",
+    "build:posts": "node assets/js/build-posts.js"
   },
   "devDependencies": {
+    "cheerio": "^1.0.0",
     "serve": "^14.2.4"
   }
 }

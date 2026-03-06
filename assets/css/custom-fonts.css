@@ -147,21 +147,34 @@ body.list,
   }
 }
 
-/* Compact home: less gap between intro/social and first post cards */
+/* Home: consistent spacing between welcome block and first post card on mobile and desktop */
 .main .first-entry.home-info {
-  margin-bottom: 0.35rem;
+  margin-bottom: 1rem;
+}
+.main .first-entry.home-info .entry-header {
+  margin-bottom: 0.2em;
 }
 .main .first-entry.home-info .entry-content {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.main .first-entry.home-info .entry-content p {
   margin-bottom: 0;
 }
 .main .first-entry.home-info .entry-footer {
-  margin-top: 0.35rem;
+  margin-top: 0.1rem;
 }
 .main .post-entry {
-  margin-top: 0.4rem;
+  margin-top: var(--gap);
 }
 .main .post-entry:first-of-type {
-  margin-top: 0.25rem;
+  margin-top: 1rem;
+}
+/* Prevent base theme from stretching welcome block on mobile (min-height: 260px) so spacing stays consistent */
+@media screen and (max-width: 768px) {
+  .main .first-entry.home-info {
+    min-height: 0;
+  }
 }
 /* Tighter padding inside post cards */
 .main .post-entry .entry-header {
@@ -192,9 +205,11 @@ body.list,
   line-height: 1.375;
 }
 
-/* Nav: constrain to same content width as .main and .footer */
+/* Nav: same content width as .main and .footer; right padding so last icon aligns with footer text */
 .nav {
   max-width: calc(var(--main-width) + var(--gap) * 2);
+  justify-content: flex-start;
+  padding-inline-end: var(--gap);
 }
 
 .logo-switches {
@@ -227,6 +242,11 @@ body:not(.list) .logo {
 }
 
 /* Font Awesome social icons: size and color to match theme */
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
 .social-icons a {
   color: var(--primary);
 }
@@ -236,4 +256,67 @@ body:not(.list) .logo {
 .social-icons .fa-solid,
 .social-icons .fa-brands {
   font-size: 1.25rem;
+}
+
+/* Header nav: social icons right-aligned, compact and tight (override base .social-icons spacing) */
+.nav .social-icons.nav-social {
+  margin-left: auto;
+  padding: 0;
+  gap: 0.5rem;
+  align-items: center;
+}
+.nav .social-icons.nav-social a {
+  margin-inline-end: 0;
+}
+.nav .social-icons.nav-social a:not(:last-of-type) {
+  margin-inline-end: 0;
+}
+.nav .social-icons.nav-social .fa-solid,
+.nav .social-icons.nav-social .fa-brands {
+  font-size: 0.9rem;
+}
+
+/* Minimal post nav: prev/next between posts */
+.post-nav {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border);
+}
+.post-nav a {
+  color: var(--secondary);
+  text-decoration: none;
+  max-width: 45%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.post-nav a:hover {
+  color: var(--primary);
+}
+.post-nav-prev {
+  text-align: left;
+}
+.post-nav-next {
+  text-align: right;
+}
+
+/* Hide scrollbar on all pages (content remains scrollable) */
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+body::-webkit-scrollbar {
+  display: none;
 }

@@ -12,6 +12,7 @@
 <link rel="canonical" href="/posts/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.51b2420ff5ea1215cdf584af7ba59d5fea94201c33f25109d6448c7271631316.css" integrity="sha256-UbJCD/XqEhXN9YSve6WdX&#43;qUIBwz8lEJ1kSMcnFjExY=" rel="preload stylesheet" as="style">
 <link rel="stylesheet" href="/assets/css/custom-fonts.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
@@ -64,25 +65,7 @@
 </head>
 
 <body class="list" id="top">
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$','$$'], ['\\[', '\\]']],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-    }
-  };
-
-  window.addEventListener('load', (event) => {
-      document.querySelectorAll("mjx-container").forEach(function(x){
-        x.parentElement.classList += 'has-jax'})
-    });
-
-</script>
+<script src="/assets/js/mathjax-init.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -114,6 +97,13 @@
                 </a>
             </li>
         </ul>
+        <div class="social-icons nav-social">
+            <a href="mailto:" target="_blank" rel="noopener noreferrer me" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#" rel="noopener noreferrer me" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" rel="noopener noreferrer me" title="Google Scholar" aria-label="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+            <a href="#" rel="noopener noreferrer me" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer me" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
     </nav>
 </header>
 <main class="main"> 
@@ -123,30 +113,14 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Prompt Engineering
+    <h2>Redesigning Convoy
     </h2>
   </header>
   <section class="entry-content">
-    <p>Prompt Engineering, also known as In-Context Prompting, refers to methods for how to communicate with LLM to steer its behavior for desired outcomes without updating the model weights. It is an empirical science and the effect of prompt engineering methods can vary a lot among models, thus requiring heavy experimentation and heuristics.
-This post only focuses on prompt engineering for autoregressive language models, so nothing with Cloze tests, image generation or multimodality models. At its core, the goal of prompt engineering is about alignment and model steerability. Check my previous post on controllable text generation.
-...</p>
+    <p>This project was initially started as a personal investigation into alternative environments for data manipulation. Since the target audience for this type of tool is broad, ranging from novices needing assistance to experts who can traverse an IDE with minimal effort, I knew I had to scope out my work to fit a particular use case. As an undergraduate, I interned at the Council on Foreign Relations and was introduced to the world of data visualization, specifically within the newsroom.…</p>
   </section>
-  <footer class="entry-footer">Date: March 15, 2023  |  Estimated Reading Time: 21 min</footer>
-  <a class="entry-link" aria-label="post link to Prompt Engineering" href="/posts/2023-03-15-prompt-engineering/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>An Overview of Deep Learning for Curious People
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>(The post was originated from my talk for WiMLDS x Fintech meetup hosted by Affirm.)
-I believe many of you have watched or heard of the games between AlphaGo and professional Go player Lee Sedol in 2016. Lee has the highest rank of nine dan and many world championships. No doubt, he is one of the best Go players in the world, but he lost by 1-4 in this series versus AlphaGo. Before this, Go was considered to be an intractable game for computers to master...
-...</p>
-  </section>
-  <footer class="entry-footer">Date: June 21, 2017  |  Estimated Reading Time: 15 min</footer>
-  <a class="entry-link" aria-label="post link to An Overview of Deep Learning for Curious People" href="/posts/2017-06-21-overview/"></a>
+  <footer class="entry-footer">March 5, 2025</footer>
+  <a class="entry-link" aria-label="post link to Redesigning Convoy" href="/posts/2025-03-05-redesigning-convoy/"></a>
 </article>
 </main>
     
@@ -164,48 +138,9 @@ I believe many of you have watched or heard of the games between AlphaGo and pro
     </svg>
 </a>
 
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
+<script src="/assets/js/menu-scroll.js"></script>
+<script src="/assets/js/anchor-links.js"></script>
+<script src="/assets/js/top-link.js"></script>
 </body>
 
 </html>

@@ -1,91 +1,220 @@
-/* ABC Favorit Condensed – body text */
+/* ABC Arizona Mix – body text */
 @font-face {
-  font-family: "ABC Favorit Condensed";
-  src: url("../fonts/ABC%20Favorit%20Condensed/ABCFavoritCondensed-Regular-Trial.woff2") format("woff2"),
-       url("../fonts/ABC%20Favorit%20Condensed/ABCFavoritCondensed-Regular-Trial.woff") format("woff"),
-       url("../fonts/ABC%20Favorit%20Condensed/ABCFavoritCondensed-Regular-Trial.otf") format("opentype");
+  font-family: "ABC Arizona Mix";
+  src: url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-Thin-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-Thin-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-Thin-Trial.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABC Arizona Mix";
+  src: url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-ThinItalic-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-ThinItalic-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-ThinItalic-Trial.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABC Arizona Mix";
+  src: url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-Light-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-Light-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-Light-Trial.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABC Arizona Mix";
+  src: url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-LightItalic-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-LightItalic-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-LightItalic-Trial.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABC Arizona Mix";
+  src: url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-Regular-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-Regular-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-Regular-Trial.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "ABC Favorit Condensed";
-  src: url("../fonts/ABC%20Favorit%20Condensed/ABCFavoritCondensed-Book-Trial.woff2") format("woff2"),
-       url("../fonts/ABC%20Favorit%20Condensed/ABCFavoritCondensed-Book-Trial.woff") format("woff"),
-       url("../fonts/ABC%20Favorit%20Condensed/ABCFavoritCondensed-Book-Trial.otf") format("opentype");
-  font-weight: 350;
-  font-style: normal;
+  font-family: "ABC Arizona Mix";
+  src: url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-RegularItalic-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-RegularItalic-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-RegularItalic-Trial.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "ABC Favorit Condensed";
-  src: url("../fonts/ABC%20Favorit%20Condensed/ABCFavoritCondensed-Medium-Trial.woff2") format("woff2"),
-       url("../fonts/ABC%20Favorit%20Condensed/ABCFavoritCondensed-Medium-Trial.woff") format("woff"),
-       url("../fonts/ABC%20Favorit%20Condensed/ABCFavoritCondensed-Medium-Trial.otf") format("opentype");
+  font-family: "ABC Arizona Mix";
+  src: url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-Medium-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-Medium-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-Medium-Trial.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "ABC Favorit Condensed";
-  src: url("../fonts/ABC%20Favorit%20Condensed/ABCFavoritCondensed-Bold-Trial.woff2") format("woff2"),
-       url("../fonts/ABC%20Favorit%20Condensed/ABCFavoritCondensed-Bold-Trial.woff") format("woff"),
-       url("../fonts/ABC%20Favorit%20Condensed/ABCFavoritCondensed-Bold-Trial.otf") format("opentype");
+  font-family: "ABC Arizona Mix";
+  src: url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-MediumItalic-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-MediumItalic-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-MediumItalic-Trial.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABC Arizona Mix";
+  src: url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-Bold-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-Bold-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-Bold-Trial.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
-/* ABC Favorit Mono – headings */
 @font-face {
-  font-family: "ABC Favorit Mono";
-  src: url("../fonts/ABC%20Favorit%20Mono/ABCFavoritMono-Regular-Trial.woff2") format("woff2"),
-       url("../fonts/ABC%20Favorit%20Mono/ABCFavoritMono-Regular-Trial.woff") format("woff"),
-       url("../fonts/ABC%20Favorit%20Mono/ABCFavoritMono-Regular-Trial.otf") format("opentype");
+  font-family: "ABC Arizona Mix";
+  src: url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-BoldItalic-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-BoldItalic-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-BoldItalic-Trial.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ABC Arizona Sans – headings and figure text */
+@font-face {
+  font-family: "ABC Arizona Sans";
+  src: url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-Thin-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-Thin-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-Thin-Trial.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABC Arizona Sans";
+  src: url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-ThinItalic-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-ThinItalic-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-ThinItalic-Trial.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABC Arizona Sans";
+  src: url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-Light-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-Light-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-Light-Trial.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABC Arizona Sans";
+  src: url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-LightItalic-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-LightItalic-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-LightItalic-Trial.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABC Arizona Sans";
+  src: url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-Regular-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-Regular-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-Regular-Trial.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "ABC Favorit Mono";
-  src: url("../fonts/ABC%20Favorit%20Mono/ABCFavoritMono-Medium-Trial.woff2") format("woff2"),
-       url("../fonts/ABC%20Favorit%20Mono/ABCFavoritMono-Medium-Trial.woff") format("woff"),
-       url("../fonts/ABC%20Favorit%20Mono/ABCFavoritMono-Medium-Trial.otf") format("opentype");
+  font-family: "ABC Arizona Sans";
+  src: url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-RegularItalic-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-RegularItalic-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-RegularItalic-Trial.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABC Arizona Sans";
+  src: url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-Medium-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-Medium-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-Medium-Trial.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "ABC Favorit Mono";
-  src: url("../fonts/ABC%20Favorit%20Mono/ABCFavoritMono-Bold-Trial.woff2") format("woff2"),
-       url("../fonts/ABC%20Favorit%20Mono/ABCFavoritMono-Bold-Trial.woff") format("woff"),
-       url("../fonts/ABC%20Favorit%20Mono/ABCFavoritMono-Bold-Trial.otf") format("opentype");
+  font-family: "ABC Arizona Sans";
+  src: url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-MediumItalic-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-MediumItalic-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-MediumItalic-Trial.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABC Arizona Sans";
+  src: url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-Bold-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-Bold-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-Bold-Trial.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
-/* Body and prose: condensed */
+@font-face {
+  font-family: "ABC Arizona Sans";
+  src: url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-BoldItalic-Trial.woff2") format("woff2"),
+       url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-BoldItalic-Trial.woff") format("woff"),
+       url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-BoldItalic-Trial.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Body and prose: Arizona Mix */
 body,
 .entry-content,
 .post-content,
 .archive-meta,
 .archive-count,
 .footer,
-.post-meta,
 .breadcrumbs,
 #menu a,
 #searchbox input,
 #searchResults li {
-  font-family: "ABC Favorit Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: "ABC Arizona Mix", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Headings and UI labels: mono */
+/* Headings, figure text, and date subheadings: Arizona Sans */
 h1, h2, h3, h4, h5, h6,
 .entry-header,
 .page-header h1,
@@ -96,19 +225,30 @@ h1, h2, h3, h4, h5, h6,
 .logo a,
 .copy-code,
 .pagination a,
-.button-inner {
-  font-family: "ABC Favorit Mono", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, monospace;
+.button-inner,
+figure,
+figcaption,
+.post-content figure,
+.post-content figcaption,
+.post-content .figure-narrow figcaption,
+.post-meta,
+.entry-footer {
+  font-family: "ABC Arizona Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* ABC Favorit OpenType alternates (see https://abcdinamo.com/typefaces/favorit)
-   ss01: alternate a (single-storey) | ss02: alternate g | ss03: alternate r
-   ss04: alternate y | ss05: alternate & | ss06: alternate ? | onum: oldstyle figures */
+/* OpenType stylistic sets: ss01, ss07, ss04, ss05 */
+.my-text,
 body,
-.font-diatype,
-.main-heading-semi-mono,
-.section-heading-semi-mono,
-.announcement-title {
-  font-feature-settings: "ss01" 1, "ss02" 1, "ss03" 1, "ss04" 1, "ss05" 1, "ss06" 1, "onum" 1;
+.entry-content,
+.post-content,
+.archive-meta,
+.footer,
+.post-meta,
+.breadcrumbs,
+#menu a,
+#searchbox input,
+#searchResults li {
+  font-feature-settings: "ss01" 1, "ss07" 1, "ss04" 1, "ss05" 1;
 }
 
 /* Light theme only – starker white with clear contrast */
@@ -319,4 +459,46 @@ body {
 }
 body::-webkit-scrollbar {
   display: none;
+}
+
+/* Post figures: narrow, centered image with proportional caption (use class figure-narrow on figure) */
+.post-content .figure-narrow {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.post-content .figure-narrow img {
+  max-width: 65%;
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.post-content .figure-narrow figcaption {
+  font-size: 0.85em;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Post figures: two images side by side with one caption */
+.post-content .figure-side-by-side {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.post-content .figure-side-by-side-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5em;
+}
+.post-content .figure-side-by-side-inner img {
+  max-width: 48%;
+  width: auto;
+  height: auto;
+}
+.post-content .figure-side-by-side figcaption {
+  font-size: 0.85em;
 }

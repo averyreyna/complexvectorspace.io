@@ -6,13 +6,20 @@
     <description>Recent content on Lil&#39;Log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Redesigning Convoy</title>
-      <link>/posts/2025-03-05-redesigning-convoy/</link>
-      <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>/posts/2025-03-05-redesigning-convoy/</guid>
+      <link>/posts/redesigning-convoy/</link>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>/posts/redesigning-convoy/</guid>
       <description>Notes on redesigning Convoy.</description>
+    </item>
+    <item>
+      <title>Local(host) Software</title>
+      <link>/posts/local-host-software/</link>
+      <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>/posts/local-host-software/</guid>
+      <description>Local(host) Software.</description>
     </item>
   </channel>
 </rss>

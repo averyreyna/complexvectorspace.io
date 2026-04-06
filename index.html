@@ -9,11 +9,11 @@
 <title>Complex Vector Space</title>
 
 <meta name="description" content="Document my learning notes.">
-<meta name="author" content="Lilian Weng">
+<meta name="author" content="Avery Reyna">
 <link rel="canonical" href="/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.51b2420ff5ea1215cdf584af7ba59d5fea94201c33f25109d6448c7271631316.css" integrity="sha256-UbJCD/XqEhXN9YSve6WdX&#43;qUIBwz8lEJ1kSMcnFjExY=" rel="preload stylesheet" as="style">
 <link rel="stylesheet" href="/assets/css/custom-fonts.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
@@ -44,8 +44,10 @@
 <meta property="og:description" content="Document my learning notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/" />
+<meta property="og:image" content="/og-image.svg" />
 
 <meta name="twitter:card" content="summary"/>
+<meta name="twitter:image" content="/og-image.svg" />
 <meta name="twitter:title" content="Complex Vector Space"/>
 <meta name="twitter:description" content="Document my learning notes."/>
 
@@ -98,46 +100,33 @@
             </li>
         </ul>
         <div class="social-icons nav-social">
-            <a href="mailto:" target="_blank" rel="noopener noreferrer me" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-            <a href="#" rel="noopener noreferrer me" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            <a href="#" rel="noopener noreferrer me" title="Google Scholar" aria-label="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-            <a href="#" rel="noopener noreferrer me" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer me" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
         </div>
     </nav>
 </header>
-<main class="main"> 
+<main class="main">
 <article class="first-entry home-info">
     <header class="entry-header">
         <h1>👋🏽 Welcome to Complex Vector Space</h1>
     </header>
     <section class="entry-content">
-        <p>Hello, this is Avery! I'll be documenting my learnings here.</p>
+        <p>Hello, this is Avery! I'll be documenting my learnings here. I'm currently into <em id="current-interest"></em>.</p>
+        <script>
+          const interests = ["Category Theory","Conflict-free Replicated Data Types","Dafny","Elm","Formal Methods","Local-first Software","New Media","Program Synthesis","RealWorld","Rust","Scala","Set Theory","WYSIWID"];
+          document.getElementById("current-interest").textContent = interests[Math.floor(Math.random() * interests.length)];
+        </script>
     </section>
 </article>
 
-<article class="post-entry"> 
+<article class="post-entry">
   <header class="entry-header">
-    <h2>Redesigning Convoy
+    <h2>printf("Hello, World!");
     </h2>
   </header>
   <section class="entry-content">
-    <p>This project was initially started as a personal investigation into alternative environments for data manipulation. Since the target audience for this type of tool is broad, ranging from novices needing assistance to experts who can traverse an IDE with minimal effort, I knew I had to scope out my work to fit a particular use case. As an undergraduate, I interned at the Council on Foreign Relations and was introduced to the world of data visualization, specifically within the newsroom.…</p>
+    <p>Coming soon.…</p>
   </section>
-  <footer class="entry-footer">March 25, 2025</footer>
-  <a class="entry-link" aria-label="post link to Redesigning Convoy" href="/posts/redesigning-convoy/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Local(host) Software
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>Local(host) Software.…</p>
-  </section>
-  <footer class="entry-footer">March 17, 2025</footer>
-  <a class="entry-link" aria-label="post link to Local(host) Software" href="/posts/local-host-software/"></a>
+  <footer class="entry-footer">April 5, 2026</footer>
+  <a class="entry-link" aria-label="post link to printf(&quot;Hello, World!&quot;);" href="/posts/hello-world/"></a>
 </article>
 </main>
     

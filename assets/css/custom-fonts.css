@@ -381,7 +381,7 @@ body:not(.list) .logo {
   gap: 0.5rem;
 }
 
-/* Font Awesome social icons: size and color to match theme */
+/* Material Symbols social icons: size and color to match theme */
 .social-icons {
   display: flex;
   flex-wrap: wrap;
@@ -393,9 +393,10 @@ body:not(.list) .logo {
 .social-icons a:hover {
   color: var(--secondary);
 }
-.social-icons .fa-solid,
-.social-icons .fa-brands {
+.social-icons .material-symbols-outlined {
   font-size: 1.25rem;
+  line-height: 1;
+  vertical-align: middle;
 }
 
 /* Header nav: social icons right-aligned, compact and tight (override base .social-icons spacing) */
@@ -411,9 +412,8 @@ body:not(.list) .logo {
 .nav .social-icons.nav-social a:not(:last-of-type) {
   margin-inline-end: 0;
 }
-.nav .social-icons.nav-social .fa-solid,
-.nav .social-icons.nav-social .fa-brands {
-  font-size: 0.9rem;
+.nav .social-icons.nav-social .material-symbols-outlined {
+  font-size: 1.05rem;
 }
 
 /* Minimal post nav: prev/next between posts */

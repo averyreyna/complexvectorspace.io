@@ -1,14 +1,8 @@
 [
   {
-    "title": "Redesigning Convoy",
-    "permalink": "/posts/redesigning-convoy/",
-    "content": "This project was initially started as a personal investigation into alternative environments for data manipulation. Since the target audience for this type of tool is broad, ranging from novices needing assistance to experts who can traverse an IDE with minimal effort, I knew I had to scope out my work to fit a particular use case. As an undergraduate, I interned at the Council on Foreign Relations and was introduced to the world of data visualization, specifically within the newsroom.…",
-    "date": "March 25, 2025"
-  },
-  {
-    "title": "Local(host) Software",
-    "permalink": "/posts/local-host-software/",
-    "content": "Local(host) Software.…",
-    "date": "March 17, 2025"
+    "title": "printf(\"Hello, World!\");",
+    "permalink": "/posts/hello-world/",
+    "content": "Coming soon.…",
+    "date": "April 5, 2026"
   }
 ]

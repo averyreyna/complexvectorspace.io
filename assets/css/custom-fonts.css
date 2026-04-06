@@ -1,4 +1,3 @@
-/* ABC Arizona Mix – body text */
 @font-face {
   font-family: "ABC Arizona Mix";
   src: url("../fonts/ABC%20Arizona%20Mix/ABCArizonaMix-Thin-Trial.woff2") format("woff2"),
@@ -99,7 +98,6 @@
   font-display: swap;
 }
 
-/* ABC Arizona Sans – headings and figure text */
 @font-face {
   font-family: "ABC Arizona Sans";
   src: url("../fonts/ABC%20Arizona%20Sans/ABCArizonaSans-Thin-Trial.woff2") format("woff2"),
@@ -200,7 +198,6 @@
   font-display: swap;
 }
 
-/* Body and prose: Arizona Mix */
 body,
 .entry-content,
 .post-content,
@@ -214,7 +211,6 @@ body,
   font-family: "ABC Arizona Mix", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Headings, figure text, and date subheadings: Arizona Sans */
 h1, h2, h3, h4, h5, h6,
 .entry-header,
 .page-header h1,
@@ -236,7 +232,6 @@ figcaption,
   font-family: "ABC Arizona Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* OpenType stylistic sets: ss01, ss07, ss04, ss05 */
 .my-text,
 body,
 .entry-content,
@@ -251,7 +246,6 @@ body,
   font-feature-settings: "ss01" 1, "ss07" 1, "ss04" 1, "ss05" 1;
 }
 
-/* Light theme only – starker white with clear contrast */
 body.dark,
 body {
   --theme: #ffffff;
@@ -265,7 +259,6 @@ body {
   --border: rgb(200, 200, 200);
 }
 
-/* List pages (home, posts index, archives, etc.) use same stark white as theme */
 body.list,
 .list {
   background: var(--theme);
@@ -287,7 +280,6 @@ body.list,
   }
 }
 
-/* Home: consistent spacing between welcome block and first post card on mobile and desktop */
 .main .first-entry.home-info {
   margin-bottom: 1rem;
 }
@@ -310,13 +302,11 @@ body.list,
 .main .post-entry:first-of-type {
   margin-top: 1rem;
 }
-/* Prevent base theme from stretching welcome block on mobile (min-height: 260px) so spacing stays consistent */
 @media screen and (max-width: 768px) {
   .main .first-entry.home-info {
     min-height: 0;
   }
 }
-/* Tighter padding inside post cards */
 .main .post-entry .entry-header {
   margin-bottom: 0.25em;
 }
@@ -330,7 +320,6 @@ body.list,
   text-align: right;
 }
 
-/* Text justify and snug line height across content */
 .main .entry-content,
 .main .entry-content p,
 .post-content,
@@ -345,7 +334,6 @@ body.list,
   line-height: 1.375;
 }
 
-/* Nav: same content width as .main and .footer; right padding so last icon aligns with footer text */
 .nav {
   max-width: calc(var(--main-width) + var(--gap) * 2);
   justify-content: flex-start;
@@ -360,19 +348,16 @@ body.list,
   margin-inline-start: 0.5rem;
 }
 
-/* Hide CVS logo on single post pages (body has no .list class) */
 body:not(.list) .logo {
   display: none;
 }
 
-/* Post cards: less rounded, darker border, compact padding */
 .main .post-entry {
   border-radius: 4px;
   border-color: rgb(160, 160, 160);
   padding: 0.6rem 0.85rem;
 }
 
-/* Footer: copyright left, powered-by right */
 .footer {
   display: flex;
   justify-content: space-between;
@@ -381,7 +366,6 @@ body:not(.list) .logo {
   gap: 0.5rem;
 }
 
-/* Material Symbols social icons: size and color to match theme */
 .social-icons {
   display: flex;
   flex-wrap: wrap;
@@ -399,7 +383,6 @@ body:not(.list) .logo {
   vertical-align: middle;
 }
 
-/* Header nav: social icons right-aligned, compact and tight (override base .social-icons spacing) */
 .nav .social-icons.nav-social {
   margin-left: auto;
   padding: 0;
@@ -416,7 +399,6 @@ body:not(.list) .logo {
   font-size: 1.05rem;
 }
 
-/* Minimal post nav: prev/next between posts */
 .post-nav {
   display: none;
   justify-content: space-between;
@@ -445,7 +427,6 @@ body:not(.list) .logo {
   text-align: right;
 }
 
-/* Hide scrollbar on all pages (content remains scrollable) */
 html {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -461,7 +442,6 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-/* Post figures: narrow, centered image with proportional caption (use class figure-narrow on figure) */
 .post-content .figure-narrow {
   text-align: center;
   margin-left: auto;
@@ -481,7 +461,6 @@ body::-webkit-scrollbar {
   margin-right: auto;
 }
 
-/* Post figures: two images side by side with one caption */
 .post-content .figure-side-by-side {
   text-align: center;
   margin-left: auto;

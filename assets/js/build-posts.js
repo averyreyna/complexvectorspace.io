@@ -1,10 +1,3 @@
-/**
- * Build script: reads each post's index.html, extracts title, date, permalink,
- * and summary (first paragraph of .post-content). Writes index.json and
- * regenerates the post list HTML in index.html and posts/index.html.
- * Run with: node assets/js/build-posts.js
- */
-
 const fs = require('fs');
 const path = require('path');
 const { load } = require('cheerio');
@@ -38,22 +31,17 @@ function extractPosts() {
     const date = dateEl.text().trim();
     const permalink = `/posts/${dirName}/`;
 
-    // Summary: first paragraph of .post-content (plain text), then "…"
     const contentDiv = $('.post-content');
     let summary = '';
     const firstP = contentDiv.find('p').first();
     if (firstP.length) {
       summary = firstP.text().trim().replace(/\s+/g, ' ');
-      if (summary && !summary.endsWith('…') && !summary.endsWith('...')) {
-        summary += '…';
-      }
     }
     if (!summary) summary = '';
 
     posts.push({ title, permalink, content: summary, date });
   }
 
-  // Sort by date descending (newest first). Keep string date for display.
   posts.sort((a, b) => {
     const dA = new Date(a.date);
     const dB = new Date(b.date);
@@ -85,7 +73,6 @@ function updateIndexHtml(posts) {
   const indexPath = path.join(ROOT, 'index.html');
   let html = fs.readFileSync(indexPath, 'utf8');
 
-  // Replace the block of post-entry articles (from first <article class="post-entry"> to last </article> before </main>)
   const postEntriesBlock = posts.map(postEntryHtml).join('\n');
   const regex = /(<article class="post-entry">[\s\S]*?<\/article>\s*)+/;
   if (!regex.test(html)) {

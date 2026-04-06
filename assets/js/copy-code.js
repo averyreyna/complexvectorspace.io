@@ -33,7 +33,6 @@
     if (container.classList.contains('highlight')) {
       container.appendChild(copybutton);
     } else if (container.parentNode.firstChild === container) {
-      // skip
     } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName === 'TABLE') {
       codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
     } else {

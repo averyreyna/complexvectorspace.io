@@ -328,6 +328,12 @@ body.list,
   text-align: justify;
   line-height: 1.375;
 }
+
+/* Avoid justified text on clamped list excerpts; it can cause ellipsis overlap on mobile. */
+.main .post-entry .entry-content,
+.main .post-entry .entry-content p {
+  text-align: left;
+}
 .post-meta,
 .entry-footer,
 .archive-meta {
@@ -364,6 +370,7 @@ body:not(.list) .logo {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
+  font-size: 10px;
 }
 
 .social-icons {

@@ -1,5 +1,11 @@
 [
   {
+    "title": "Localhost as Interface",
+    "permalink": "/posts/localhost-as-interface/",
+    "content": "As an undergraduate student taking CS classes with little coding background, I found it difficult to build the intuition needed to discern which technical concepts were connected and how certain programming tasks were related.",
+    "date": "April 21, 2026"
+  },
+  {
     "title": "printf(\"Hello, World!\");",
     "permalink": "/posts/hello-world/",
     "content": "I've been meaning to officially offload some of my more structured thoughts and put them into an organized, structured location. I've tried my fair share of blogging platforms (Medium and Bear Blog mostly) and none of them really stuck, but I want to take one final shot at documenting what I'm learning and why I find it interesting—although the fact I'm dedicating time to write a piece on said learnings demonstrates this interest.",

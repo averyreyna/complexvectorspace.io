@@ -329,6 +329,12 @@ body.list,
   line-height: 1.375;
 }
 
+.post-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .main .post-entry .entry-content,
 .main .post-entry .entry-content p {
   text-align: left;

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Localhost as Interface</title>
+<meta name="keywords" content="local-first software, malleable software, LLMs, interfaces, ephemerality" />
+<meta name="description" content="As an undergraduate student taking CS classes with little coding background, I found it difficult to build the intuition needed to discern which technical concepts were connected and how certain programming tasks were related.">
+<meta name="author" content="Avery Reyna">
+<link rel="canonical" href="/posts/localhost-as-interface/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.51b2420ff5ea1215cdf584af7ba59d5fea94201c33f25109d6448c7271631316.css" integrity="sha256-UbJCD/XqEhXN9YSve6WdX+qUIBwz8lEJ1kSMcnFjExY=" rel="preload stylesheet" as="style">
+<link rel="stylesheet" href="/assets/css/custom-fonts.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.2eadbb982468c11a433a3e291f01326f2ba43f065e256bf792dbd79640a92316.js" integrity="sha256-Lq27mCRowRpDOj4pHwEybyukPwZeJWv3ktvXlkCpIxY="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="/posts/localhost-as-interface/" />
+<noscript>
+    <style>
+        .top-link {
+            display: none;
+        }
+    </style>
+</noscript>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HFT45VFBX6"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-HFT45VFBX6');
+        }
+      </script><meta property="og:title" content="Localhost as Interface" />
+<meta property="og:description" content="As an undergraduate student taking CS classes with little coding background, I found it difficult to build the intuition needed to discern which technical concepts were connected and how certain programming tasks were related." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/localhost-as-interface/" />
+<meta property="og:image" content="/og-image.svg" />
+<meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2026-04-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-04-21T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Localhost as Interface"/>
+<meta name="twitter:description" content="As an undergraduate student taking CS classes with little coding background, I found it difficult to build the intuition needed to discern which technical concepts were connected and how certain programming tasks were related."/>
+<meta name="twitter:image" content="/og-image.svg" />
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Localhost as Interface",
+      "item": "/posts/localhost-as-interface/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Localhost as Interface",
+  "name": "Localhost as Interface",
+  "description": "As an undergraduate student taking CS classes with little coding background, I found it difficult to build the intuition needed to discern which technical concepts were connected and how certain programming tasks were related.",
+  "keywords": [
+    "local-first software", "malleable software", "LLMs", "interfaces", "ephemerality"
+  ],
+  "articleBody": "As an undergraduate taking CS classes without a deep coding background, I kept running into the same problem: understanding isolated concepts is one thing, but understanding how they connect is much harder. Lecture notes, diagrams, repositories, and problem sets each carry part of the story, but they rarely live in one place. In a study context, what I wanted was simple: a temporary, shared workspace where data, annotations, and visualizations can be assembled around a specific task, then discarded once the task is done.\\n\\nThat idea led to an observation: most software can be reduced to structured data, a view over that data, and some business logic. If agents can now generate data structures and web interfaces together, software starts behaving less like a durable product and more like a generated perspective tailored to a moment.\\n\\nThis framing is not entirely new. Relational databases already separated logical structure from physical storage and made data queryable through abstraction. What has remained expensive is the interface layer. Mainstream applications still encode assumptions about the median user, and those assumptions guide how users think about their own information. Calendars impose a spatial model of time. Documents encode a writing workflow. Spreadsheets privilege certain computations over others.\\n\\nAlan Kay argued that this was a constraint of the medium itself: people adapt to applications instead of applications adapting to thought. The product model made sense when interface production was expensive. But that condition is changing.\\n\\nIn the post-LLM environment, low-stakes, bounded interfaces are cheaper to produce and revise. Iteration loops are compressed. You can sketch a working tool in the same spirit as a whiteboard: useful during collaboration, disposable afterwards, and unconcerned with long-term permanence. This differs from both traditional custom software and deployment-first \"vibe coding\". The pattern here is scoped data, generated view, collaboration channel, and disposal on completion.\\n\\nWhen the data already lives on your machine and view generation is cheap, localhost starts to look less like a developer endpoint and more like a general-purpose interface medium. Software becomes social and situational first, with persistence as an optional property rather than a default requirement.\\n\\nThere are obvious tensions. Trust and security questions become more urgent when generated code can access local filesystems. Data standardization remains weak for unstructured personal data, making context discovery brittle for agents. And activation energy still varies by user skill. Technical users can already describe transformations with enough precision to get useful results, while non-technical workflows still require better abstractions.\\n\\nFuture work should focus on secure pathways to local context, conventions for describing unstructured data, and trust models for generated code. If those pieces improve, localhost-mediated, task-specific software may become a practical interface pattern beyond technical users.",
+  "wordCount" : "790",
+  "inLanguage": "en",
+  "datePublished": "2026-04-21T00:00:00Z",
+  "dateModified": "2026-04-21T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Avery Reyna"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/posts/localhost-as-interface/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Complex Vector Space",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/favicon.svg"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script src="/assets/js/mathjax-init.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="/" accesskey="h" title="Home (Alt + H)" aria-label="Home"></a>
+            <span class="logo-switches">
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="/search/" title="Search (Alt + /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+        <div class="social-icons nav-social"></div>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      Localhost as Interface
+    </h1>
+    <div class="post-meta">April 21, 2026</div>
+  </header>
+
+  <div class="post-content">
+    <p>
+      As an undergraduate student taking CS classes with little coding background, I found it difficult to build the
+      intuition needed to discern which technical concepts were connected and how certain programming tasks were
+      related. While this wasn't for lack of trying, I found the ecosystem of learning tools to be disjointed:
+      integrating ASCII diagrams of memory allocation cycles into a repository full of messy code blocks is not for
+      the faint of heart.
+    </p>
+
+    <p>
+      In a perfect world, I'd be able to collaborate with a couple of my classmates to compile lecture notes, PDFs,
+      and problem sets for a final, spinning up a shareable localhost tool that pulls it all together. This then
+      becomes a shared workspace where annotations, solutions, and even visualizations can uniquely illustrate how
+      concepts interact. Once we're done studying and the final is taken, this study tool dies with no funeral.
+      Although that is too morbid a metaphor, the question still remains: what happens when software can be this
+      specific and this disposable?
+    </p>
+
+    <!-- <figure>
+      <img src="/posts/localhost-as-interface/fig-study-localhost-tunnel.png" alt="Flow diagram showing lectures, notes, problem sets, and papers feeding an LLM-generated interface on localhost that is shared via a tunnel." style="display:block;width:100%;max-width:980px;height:auto;margin:0 auto;">
+      <figcaption>Study materials are compiled into a temporary localhost view, shared with collaborators through a tunnel, then discarded after the final.</figcaption>
+    </figure> -->
+
+    <h2>An Initial Observation</h2>
+    <p>
+      While thinking about local-first software and how it's situated as a (sort of) complement to malleable
+      software, I wrote down:
+    </p>
+
+    <blockquote>
+      [a] database is structured data, UI is a medium for interacting with that data... most applications are just
+      some variation of that, plus some added business logic” → “If an agent can generate both a structure to some
+      data and a view for said data via a web app, 'software' becomes more a view than a product you [pay for]” →
+      “ephemeral and personal [truly]
+    </blockquote>
+
+    <p>
+      In short, once you strip that away and its associated multitenancy, all you have left is data and a view shaped
+      for some task. This thinking is not new, with relational DBs and SQL rooted in adding a layer of abstraction
+      above physical storage and accessing it via a query language.<sup><a href="#fn1" id="ref1">1</a></sup> However,
+      the interface layer has not seen the same evolution. The way you see and interact with your data is still
+      determined by the encoded assumptions about the median user, which naturally shape how the software makes you
+      think about your own data. For example, a calendar app makes a claim about how you spatially organize time in a
+      year, a word processing document has a set of assumptions about the structure of the writing process, and even a
+      spreadsheet encodes rules about which types of computation should be accessed first. Alan Kay argued decades ago
+      that this was a failure of the medium<sup><a href="#fn2" id="ref2">2</a></sup>, suggesting that computers should
+      be shaped to our thinking rather than appliances we adapt to our thinking; the mental models of other people are
+      frozen into an interface and optimized for this convergence towards the center. As such, the application-as-
+      product model is an artifact of the view layer being too expensive to produce.
+    </p>
+
+    <h2>Views Are Now Cheap</h2>
+    <p>
+      The timing of this observation matters in the post-ChatGPT era, since generating views is increasingly becoming
+      a thing of the past. I'm not arguing that average users are creating their own solutions for external tools like
+      Grafana or QuickBooks; rather, the decision to learn development skills becomes more approachable since code
+      generation is cheaper and more abundant than ever. LLMs, on average, collapse the cost for bound, low-stakes,
+      and specific views. This is akin to a whiteboard: the sketching, erasing, and connections between elements don't
+      have to be archived or made more serious than the task at hand. Geoffrey Litt's thoughts on malleable software
+      in the age of LLMs<sup><a href="#fn3" id="ref3">3</a></sup> serve as an anchor here, but I'm focusing
+      specifically on ephemerality rather than persistent customization.
+    </p>
+
+    <p>
+      LLMs compress a slow, product-mediated feedback loop, making iteration much quicker, and the app shifts from a
+      fixed product to a flexible view shaped by the user's needs.<sup><a href="#fn3">3</a></sup>
+    </p>
+
+    <p>
+      Once the development loop is tight enough, the "app" in the middle stops being a persistent source of friction
+      that constantly needs updating and becomes something generated, used, and discarded. Similarly, Ink &amp; Switch
+      considers persistent, malleable tools<sup><a href="#fn4" id="ref4">4</a></sup> and extends Kay's framework on
+      software's shape changing over time, but what happens when these tools are allowed to be maximally specific?
+    </p>
+
+    <figure>
+      <img src="/posts/localhost-as-interface/fig-llm-feedback-loop.png" alt="Sketch of a user, app interface, and LLM-mediated feedback loop between user intent and iterative updates." style="display:block;width:100%;max-width:980px;height:auto;margin:0 auto;">
+      <figcaption>LLM-assisted iteration compresses the feedback loop, moving the app from rigid product to flexible, task-specific view.</figcaption>
+    </figure>
+
+    <h2>Localhost as the Interface</h2>
+    <p>
+      When generating views is cheap and the data you need lives on your machine, localhost moves towards being a
+      general-purpose interface and away from a strictly developer tool.
+    </p>
+
+    <h2>Software-as-medium</h2>
+    <p>
+      Given all this, software is becoming an artifact of collaboration shaped by the interaction and disposed of
+      afterward. Similar to the whiteboard analogy, the marks left on display are a residue that indicates the
+      studying process - software can now become what's left over. Compared to custom tooling and vibe coding, this
+      perspective approaches software as something that can be social, situational, and ephemeral first and foremost.
+      For the former, it is built for a role and persists across uses; for the latter, it is entirely focused on
+      producing a product you can deploy regardless of its initial quality.
+    </p>
+
+    <p>
+      The pattern is the same in both cases: scoped data, a generated view, a tunnel for collaboration, and disposal
+      upon task completion. The timescale and the social shape are what change.
+    </p>
+
+    <h2>Current Tensions</h2>
+    <p>
+      With any new ideas involving agents and LLMs, there are immediate concerns about trust and security. Who should
+      audit the code LLM wrote that has read access to your filesystem? My initial thoughts
+    </p>
+
+    <p>
+      There are also problems with schemas, as there is no standard way to point an LLM at your stuff and have it
+      understand its structure. With codebases, there is an innate, searchable architecture afforded to agents by the
+      folder hierarchy across all software repositories. However, with unstructured data, the agent cannot make safe
+      assumptions about context and traversal, making it difficult to properly spin up views to match the cadence at
+      which you want to produce them.
+    </p>
+
+    <p>
+      As with anything related to software construction, the activation energy between groups varies widely. For CS
+      students and engineers, creating views via LLM-assisted programming is much easier, since they have the language
+      (or are at least closing their execution gap with GenAI) to describe how the data should be manipulated. The
+      more non-technical version of this is further out, but as LLMs progressively get better at writing coherent
+      code, the explanations for it can also be on the model.
+    </p>
+
+    <h2>Future Research Directions</h2>
+    <p>
+      The view layer is now cheap. What's next? The interesting research directions are two-fold. For starters, we can
+      now consider how to better support ad-hoc view generation, ideally striking a balance among correct persistent
+      context, secure routes to that context, and the standardization of unstructured file data. More broadly, there
+      are questions concerning data access conventions, trust models for generated code, and whether this interface
+      pattern generalizes beyond technical users.
+    </p>
+
+    <hr>
+    <ol>
+      <li id="fn1">Codd's abstractions also act as a prerequisite for my argument as well. You can't generate views of data if it's not queryable in a structured way. While Codd was making claims in the world of relational databases, his framework can be applied to UI generation, since the idea of "software fundamentally being a view of structured data" has legs to stand on, as articulated by Kay in Smalltalk. <a href="#" target="_blank" rel="noopener noreferrer">[add link]</a> <a href="#ref1">↩</a></li>
+      <li id="fn2">Kay really delineated between "doing something with a computer" and "using a computer application." So much so that he has a vision for Smalltalk, rooted in the idea that computers should be a medium for human thought, not just machines with executable instructions. The environment wasn't just a programming language; it was a live system that let the user point at anything on the screen to change it and inspect its behavior. <a href="#" target="_blank" rel="noopener noreferrer">[add link]</a> <a href="#ref2">↩</a></li>
+      <li id="fn3"><a href="#" target="_blank" rel="noopener noreferrer">[add link]</a> <a href="#ref3">↩</a></li>
+      <li id="fn4"><a href="#" target="_blank" rel="noopener noreferrer">[add link]</a> <a href="#ref4">↩</a></li>
+    </ol>
+  </div>
+
+  <footer class="post-footer">
+<nav class="post-nav" id="post-nav" aria-label="Post navigation"></nav>
+  </footer>
+</article>
+    </main>
+
+<footer class="footer">
+    <span>&copy; 2026 Complex Vector Space</span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script src="/assets/js/social-links.js"></script>
+<script src="/assets/js/menu-scroll.js"></script>
+<script src="/assets/js/anchor-links.js"></script>
+<script src="/assets/js/post-nav.js"></script>
+<script src="/assets/js/top-link.js"></script>
+<script src="/assets/js/copy-code.js"></script>
+</body>
+
+</html>

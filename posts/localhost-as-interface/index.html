@@ -15,12 +15,12 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.2eadbb982468c11a433a3e291f01326f2ba43f065e256bf792dbd79640a92316.js" integrity="sha256-Lq27mCRowRpDOj4pHwEybyukPwZeJWv3ktvXlkCpIxY="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="/favicon.ico" sizes="any" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-<link rel="manifest" href="/site.webmanifest" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" href="/assets/favicon/favicon.ico" sizes="any" />
+<link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
+<link rel="manifest" href="/assets/favicon/site.webmanifest" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <link rel="alternate" hreflang="en" href="/posts/localhost-as-interface/" />
@@ -169,8 +169,8 @@
 
     <p>
       In a perfect world, I'd be able to collaborate with a couple of my classmates to compile lecture notes, PDFs,
-      and problem sets for a final, spinning up a shareable localhost tool that pulls it all together. This then
-      becomes a shared workspace where annotations, solutions, and even visualizations can uniquely illustrate how
+      and problem sets for a final, spinning up a <span class="annotated" id="ann-anchor-shared-localhost" data-note-id="note-shared-localhost">shareable localhost tool</span> that pulls it all together. This then
+      becomes a <span class="annotated" id="ann-anchor-shared-workspace" data-note-id="note-shared-workspace">shared workspace</span> where annotations, solutions, and even visualizations can uniquely illustrate how
       concepts interact. Once we're done studying and the final is taken, this study tool dies with no funeral.
       Although that is too morbid a metaphor, the question still remains: what happens when software can be this
       specific and this disposable?
@@ -222,7 +222,7 @@
     </p>
 
     <p>
-      LLMs compress a slow, product-mediated feedback loop, making iteration much quicker, and the app shifts from a
+      LLMs compress a <span class="annotated" id="ann-anchor-feedback-loop" data-note-id="note-feedback-loop">slow, product-mediated feedback loop</span>, making iteration much quicker, and the app shifts from a
       fixed product to a flexible view shaped by the user's needs.<sup><a href="#fn3">3</a></sup>
     </p>
 
@@ -290,12 +290,24 @@
       pattern generalizes beyond technical users.
     </p>
 
+    <aside class="margin-notes" aria-label="Margin comments">
+      <div class="margin-note" id="note-shared-localhost" data-side="right">
+        The localhost address becomes collaboration infrastructure rather than just a developer endpoint.
+      </div>
+      <div class="margin-note" id="note-shared-workspace" data-side="left">
+        This is the social center of the essay: a temporary place to think together, then discard.
+      </div>
+      <div class="margin-note" id="note-feedback-loop" data-side="right">
+        Key claim: LLM-assisted iteration collapses the time between intent and interface revision.
+      </div>
+    </aside>
+
     <hr>
     <ol>
-      <li id="fn1">Codd's abstractions also act as a prerequisite for my argument as well. You can't generate views of data if it's not queryable in a structured way. While Codd was making claims in the world of relational databases, his framework can be applied to UI generation, since the idea of "software fundamentally being a view of structured data" has legs to stand on, as articulated by Kay in Smalltalk. <a href="#" target="_blank" rel="noopener noreferrer">[add link]</a> <a href="#ref1">↩</a></li>
-      <li id="fn2">Kay really delineated between "doing something with a computer" and "using a computer application." So much so that he has a vision for Smalltalk, rooted in the idea that computers should be a medium for human thought, not just machines with executable instructions. The environment wasn't just a programming language; it was a live system that let the user point at anything on the screen to change it and inspect its behavior. <a href="#" target="_blank" rel="noopener noreferrer">[add link]</a> <a href="#ref2">↩</a></li>
-      <li id="fn3"><a href="#" target="_blank" rel="noopener noreferrer">[add link]</a> <a href="#ref3">↩</a></li>
-      <li id="fn4"><a href="#" target="_blank" rel="noopener noreferrer">[add link]</a> <a href="#ref4">↩</a></li>
+      <li id="fn1">Codd's abstractions also act as a prerequisite for my argument as well. You can't generate views of data if it's not queryable in a structured way. While Codd was making claims in the world of relational databases, his framework can be applied to UI generation, since the idea of "software fundamentally being a view of structured data" has legs to stand on, as articulated by Kay in Smalltalk. <a href="#ref1">↩</a></li>
+      <li id="fn2">Kay really delineated between "doing something with a computer" and "using a computer application." So much so that he has a vision for Smalltalk, rooted in the idea that computers should be a medium for human thought, not just machines with executable instructions. The environment wasn't just a programming language; it was a live system that let the user point at anything on the screen to change it and inspect its behavior. <a href="#ref2">↩</a></li>
+      <li id="fn3"><a href="#ref3">↩</a></li>
+      <li id="fn4"><a href="#ref4">↩</a></li>
     </ol>
   </div>
 
@@ -325,6 +337,7 @@
 <script src="/assets/js/post-nav.js"></script>
 <script src="/assets/js/top-link.js"></script>
 <script src="/assets/js/copy-code.js"></script>
+<script src="/assets/js/margin-notes.js"></script>
 </body>
 
 </html>

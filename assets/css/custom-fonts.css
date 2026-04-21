@@ -505,6 +505,13 @@ body::-webkit-scrollbar {
   padding-inline: 0.06rem;
 }
 
+.post-content .footnoted {
+  background: linear-gradient(180deg, transparent 62%, rgba(210, 210, 210, 0.55) 62%);
+  border-radius: 0.12rem;
+  padding-inline: 0.06rem;
+  color: var(--primary);
+}
+
 .post-content .margin-notes {
   position: absolute;
   top: 0;
@@ -518,11 +525,26 @@ body::-webkit-scrollbar {
   top: 0;
   width: 15rem;
   padding-left: 0.75rem;
-  border-left: 1px solid var(--border);
-  color: var(--secondary);
+  border-left: 1px solid rgba(253, 233, 149, 0.9);
+  color: rgba(187, 150, 31, 1);
   font-size: 0.85rem;
   line-height: 1.35;
   pointer-events: auto;
+}
+
+.post-content .footnote-margin-note {
+  border-color: rgba(130, 130, 130, 0.75);
+  color: rgb(92, 92, 92);
+  font-size: 0.83rem;
+  line-height: 1.33;
+}
+
+.post-content .footnote-margin-note[data-side="left"] {
+  border-right-color: rgba(130, 130, 130, 0.75);
+}
+
+.post-content .footnote-margin-note[data-side="right"] {
+  border-left-color: rgba(130, 130, 130, 0.75);
 }
 
 .post-content .margin-note[data-side="right"] {
@@ -535,8 +557,16 @@ body::-webkit-scrollbar {
   padding-left: 0;
   padding-right: 0.75rem;
   border-left: 0;
-  border-right: 1px solid var(--border);
+  border-right: 1px solid rgba(253, 233, 149, 0.9);
   text-align: right;
+}
+
+.post-content .footnote-margin-note[data-side="left"] {
+  border-right: 1px solid rgba(130, 130, 130, 0.75);
+}
+
+.post-content .footnote-margin-note[data-side="right"] {
+  border-left: 1px solid rgba(130, 130, 130, 0.75);
 }
 
 .post-content .annotation-inline-ref {
@@ -569,6 +599,13 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+@media screen and (min-width: 1201px) {
+  .post-content .canonical-footnotes,
+  .post-content .canonical-footnotes-separator {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .post-content .margin-notes {
     display: none;
@@ -596,16 +633,25 @@ body::-webkit-scrollbar {
 
   .post-content .annotation-note-item {
     margin: 0 0 0.6rem;
-    color: var(--secondary);
+    color: rgba(187, 150, 31, 1);
     line-height: 1.35;
   }
 
+  .post-content .footnote-note-item {
+    color: rgb(92, 92, 92);
+  }
+
+  .post-content .canonical-footnotes li,
+  .post-content .canonical-footnotes li a {
+    color: rgb(92, 92, 92);
+  }
+
   .post-content .annotation-note-backlink {
-    color: var(--secondary);
+    color: inherit;
     text-decoration: none;
   }
 
   .post-content .annotation-note-backlink:hover {
-    color: var(--primary);
+    color: inherit;
   }
 }

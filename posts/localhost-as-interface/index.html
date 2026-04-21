@@ -197,13 +197,13 @@
     <p>
       In short, once you strip that away and its associated multitenancy, all you have left is data and a view shaped
       for some task. This thinking is not new, with relational DBs and SQL rooted in adding a layer of abstraction
-      above physical storage and accessing it via a query language.<sup><a href="#fn1" id="ref1">1</a></sup> However,
+      above physical storage and accessing it via a <span class="footnoted" id="ref1" data-footnote-id="fn1">query language</span>. However,
       the interface layer has not seen the same evolution. The way you see and interact with your data is still
       determined by the encoded assumptions about the median user, which naturally shape how the software makes you
       think about your own data. For example, a calendar app makes a claim about how you spatially organize time in a
       year, a word processing document has a set of assumptions about the structure of the writing process, and even a
       spreadsheet encodes rules about which types of computation should be accessed first. Alan Kay argued decades ago
-      that this was a failure of the medium<sup><a href="#fn2" id="ref2">2</a></sup>, suggesting that computers should
+      that this was a <span class="footnoted" id="ref2" data-footnote-id="fn2">failure of the medium</span>, suggesting that computers should
       be shaped to our thinking rather than appliances we adapt to our thinking; the mental models of other people are
       frozen into an interface and optimized for this convergence towards the center. As such, the application-as-
       product model is an artifact of the view layer being too expensive to produce.
@@ -216,20 +216,20 @@
       Grafana or QuickBooks; rather, the decision to learn development skills becomes more approachable since code
       generation is cheaper and more abundant than ever. LLMs, on average, collapse the cost for bound, low-stakes,
       and specific views. This is akin to a whiteboard: the sketching, erasing, and connections between elements don't
-      have to be archived or made more serious than the task at hand. Geoffrey Litt's thoughts on malleable software
-      in the age of LLMs<sup><a href="#fn3" id="ref3">3</a></sup> serve as an anchor here, but I'm focusing
+      have to be archived or made more serious than the task at hand. Geoffrey Litt's thoughts on
+      <span class="footnoted" id="ref3" data-footnote-id="fn3">malleable software in the age of LLMs</span> serve as an anchor here, but I'm focusing
       specifically on ephemerality rather than persistent customization.
     </p>
 
     <p>
       LLMs compress a <span class="annotated" id="ann-anchor-feedback-loop" data-note-id="note-feedback-loop">slow, product-mediated feedback loop</span>, making iteration much quicker, and the app shifts from a
-      fixed product to a flexible view shaped by the user's needs.<sup><a href="#fn3">3</a></sup>
+      fixed product to a flexible view shaped by the user's needs.
     </p>
 
     <p>
       Once the development loop is tight enough, the "app" in the middle stops being a persistent source of friction
       that constantly needs updating and becomes something generated, used, and discarded. Similarly, Ink &amp; Switch
-      considers persistent, malleable tools<sup><a href="#fn4" id="ref4">4</a></sup> and extends Kay's framework on
+      considers <span class="footnoted" id="ref4" data-footnote-id="fn4">persistent, malleable tools</span> and extends Kay's framework on
       software's shape changing over time, but what happens when these tools are allowed to be maximally specific?
     </p>
 
@@ -302,8 +302,8 @@
       </div>
     </aside>
 
-    <hr>
-    <ol>
+    <hr class="canonical-footnotes-separator">
+    <ol class="canonical-footnotes">
       <li id="fn1">Codd's abstractions also act as a prerequisite for my argument as well. You can't generate views of data if it's not queryable in a structured way. While Codd was making claims in the world of relational databases, his framework can be applied to UI generation, since the idea of "software fundamentally being a view of structured data" has legs to stand on, as articulated by Kay in Smalltalk. <a href="#ref1">↩</a></li>
       <li id="fn2">Kay really delineated between "doing something with a computer" and "using a computer application." So much so that he has a vision for Smalltalk, rooted in the idea that computers should be a medium for human thought, not just machines with executable instructions. The environment wasn't just a programming language; it was a live system that let the user point at anything on the screen to change it and inspect its behavior. <a href="#ref2">↩</a></li>
       <li id="fn3"><a href="#ref3">↩</a></li>

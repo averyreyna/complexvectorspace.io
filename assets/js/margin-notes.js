@@ -2,8 +2,12 @@
   const DESKTOP_QUERY = "(min-width: 1201px)";
   const NOTE_GAP = 12;
   const MOBILE_SECTION_CLASS = "annotation-notes-mobile-generated";
+  const GENERATED_FOOTNOTE_RAIL_CLASS = "margin-notes-generated";
+  const ANNOTATION_VARIANT = "annotation";
+  const FOOTNOTE_VARIANT = "footnote";
 
   function collectAnnotationPairs(postContent, noteRail) {
+    if (!noteRail) return [];
     const anchors = Array.from(postContent.querySelectorAll(".annotated[data-note-id]"));
 
     return anchors
@@ -15,24 +19,120 @@
         if (!note) return null;
 
         return {
-          index: index + 1,
+          variant: ANNOTATION_VARIANT,
+          sortAnchor: anchor,
           anchor,
+          anchorId: ensureAnchorId(anchor, `ann-anchor-${index + 1}`),
+          inlineRef: true,
           note,
-          noteId
+          noteId,
+          backlinkLabel: "highlight"
         };
       })
       .filter(Boolean);
   }
 
-  function ensureAnchorId(anchor, fallbackIndex) {
+  function ensureAnchorId(anchor, fallbackId) {
     if (anchor.id) return anchor.id;
-    const generatedId = `ann-anchor-${fallbackIndex}`;
-    anchor.id = generatedId;
-    return generatedId;
+    anchor.id = fallbackId;
+    return fallbackId;
+  }
+
+  function stripFootnoteBacklink(footnoteItem) {
+    const clone = footnoteItem.cloneNode(true);
+    const backlinks = clone.querySelectorAll('a[href^="#ref"], a[href^="#fnref"]');
+    backlinks.forEach((link) => {
+      const text = (link.textContent || "").trim();
+      if (text === "↩") {
+        link.remove();
+      }
+    });
+    return clone.innerHTML.trim();
+  }
+
+  function resolveFootnoteAnchor(anchor, fallbackIndex) {
+    const anchorId = ensureAnchorId(anchor, anchor.id || `fnref-${fallbackIndex}`);
+    return { anchor, anchorId };
+  }
+
+  function ensureFootnoteNoteRail(postContent, currentRail) {
+    if (currentRail) return currentRail;
+    const createdRail = document.createElement("aside");
+    createdRail.className = `margin-notes ${GENERATED_FOOTNOTE_RAIL_CLASS}`;
+    createdRail.setAttribute("aria-label", "Margin notes");
+    postContent.appendChild(createdRail);
+    return createdRail;
+  }
+
+  function collectFootnotePairs(postContent, existingRail) {
+    const textAnchors = Array.from(postContent.querySelectorAll(".footnoted[data-footnote-id]"));
+    const legacyRefs = Array.from(postContent.querySelectorAll('sup a[href^="#fn"]'));
+    const footnoteAnchors = textAnchors.length ? textAnchors : legacyRefs;
+    if (!footnoteAnchors.length) {
+      return { pairs: [], rail: existingRail };
+    }
+
+    let noteRail = existingRail;
+
+    const pairs = footnoteAnchors
+      .map((footnoteAnchor, index) => {
+        const footnoteId = textAnchors.length
+          ? footnoteAnchor.getAttribute("data-footnote-id")
+          : decodeURIComponent((footnoteAnchor.getAttribute("href") || "").slice(1));
+        if (!footnoteId) return null;
+
+        const footnoteItem = postContent.querySelector(`#${CSS.escape(footnoteId)}`);
+        if (!footnoteItem) return null;
+
+        noteRail = ensureFootnoteNoteRail(postContent, noteRail);
+
+        const { anchor, anchorId } = resolveFootnoteAnchor(footnoteAnchor, index + 1);
+        const noteElementId = `footnote-margin-${footnoteId}`;
+        let note = noteRail.querySelector(`#${CSS.escape(noteElementId)}`);
+        if (!note) {
+          note = document.createElement("div");
+          note.id = noteElementId;
+          note.className = "margin-note footnote-margin-note";
+          note.dataset.side = "right";
+          noteRail.appendChild(note);
+        }
+
+        note.innerHTML = stripFootnoteBacklink(footnoteItem);
+
+        return {
+          variant: FOOTNOTE_VARIANT,
+          sortAnchor: anchor,
+          anchor,
+          anchorId,
+          inlineRef: false,
+          note,
+          noteId: footnoteId,
+          backlinkLabel: "footnote"
+        };
+      })
+      .filter(Boolean);
+
+    return { pairs, rail: noteRail };
+  }
+
+  function compareNodeOrder(nodeA, nodeB) {
+    if (nodeA === nodeB) return 0;
+    const position = nodeA.compareDocumentPosition(nodeB);
+    if (position & Node.DOCUMENT_POSITION_FOLLOWING) return -1;
+    if (position & Node.DOCUMENT_POSITION_PRECEDING) return 1;
+    return 0;
+  }
+
+  function withDisplayOrder(pairs) {
+    const sorted = [...pairs].sort((a, b) => compareNodeOrder(a.sortAnchor, b.sortAnchor));
+    return sorted.map((pair, index) => ({
+      ...pair,
+      displayIndex: index + 1
+    }));
   }
 
   function clearGeneratedMobileNotes(postContent) {
-    const existingRefs = postContent.querySelectorAll(".annotation-inline-ref");
+    const existingRefs = postContent.querySelectorAll(".annotation-inline-ref, .footnote-inline-ref");
     existingRefs.forEach((ref) => ref.remove());
 
     const existingSection = postContent.querySelector(`.${MOBILE_SECTION_CLASS}`);
@@ -43,7 +143,8 @@
 
   function buildMobileNotes(postContent, pairs) {
     clearGeneratedMobileNotes(postContent);
-    if (!pairs.length) return;
+    const mobilePairs = pairs.filter((pair) => pair.variant === ANNOTATION_VARIANT);
+    if (!mobilePairs.length) return;
 
     const section = document.createElement("section");
     section.className = MOBILE_SECTION_CLASS;
@@ -52,34 +153,36 @@
     const list = document.createElement("ol");
     list.className = "annotation-notes-mobile-list";
 
-    pairs.forEach((pair) => {
-      const noteNumber = pair.index;
-      const anchorId = ensureAnchorId(pair.anchor, noteNumber);
-      const inlineRefId = `ann-ref-${noteNumber}`;
-      const noteItemId = `ann-note-${noteNumber}`;
+    mobilePairs.forEach((pair, mobileIndex) => {
+      const noteNumber = mobileIndex + 1;
+      const noteItemId = `${pair.variant}-note-${noteNumber}`;
+      const inlineRefClass = pair.variant === FOOTNOTE_VARIANT ? "footnote-inline-ref" : "annotation-inline-ref";
 
-      const refSup = document.createElement("sup");
-      refSup.className = "annotation-inline-ref";
-      refSup.id = inlineRefId;
+      if (pair.inlineRef) {
+        const inlineRefId = `${pair.variant}-ref-${noteNumber}`;
+        const refSup = document.createElement("sup");
+        refSup.className = inlineRefClass;
+        refSup.id = inlineRefId;
 
-      const refLink = document.createElement("a");
-      refLink.href = `#${noteItemId}`;
-      refLink.textContent = `${noteNumber}`;
-      refLink.setAttribute("aria-label", `Go to highlight note ${noteNumber}`);
-      refSup.appendChild(refLink);
-      pair.anchor.insertAdjacentElement("beforebegin", refSup);
+        const refLink = document.createElement("a");
+        refLink.href = `#${noteItemId}`;
+        refLink.textContent = `${noteNumber}`;
+        refLink.setAttribute("aria-label", `Go to ${pair.backlinkLabel} note ${noteNumber}`);
+        refSup.appendChild(refLink);
+        pair.anchor.insertAdjacentElement("beforebegin", refSup);
+      }
 
       const li = document.createElement("li");
       li.id = noteItemId;
-      li.className = "annotation-note-item";
+      li.className = `annotation-note-item ${pair.variant}-note-item`;
 
       const noteText = document.createElement("span");
       noteText.innerHTML = pair.note.innerHTML;
 
       const backLink = document.createElement("a");
-      backLink.href = `#${anchorId}`;
+      backLink.href = `#${pair.anchorId}`;
       backLink.className = "annotation-note-backlink";
-      backLink.setAttribute("aria-label", `Back to highlight ${noteNumber}`);
+      backLink.setAttribute("aria-label", `Back to ${pair.backlinkLabel} ${noteNumber}`);
       backLink.textContent = " ↩";
 
       li.appendChild(noteText);
@@ -101,11 +204,13 @@
     const postContent = document.querySelector(".post-content");
     if (!postContent) return;
 
-    const noteRail = postContent.querySelector(".margin-notes");
-    if (!noteRail) return;
-
-    const pairs = collectAnnotationPairs(postContent, noteRail);
+    const existingRail = postContent.querySelector(".margin-notes");
+    const annotationPairs = collectAnnotationPairs(postContent, existingRail);
+    const footnoteResult = collectFootnotePairs(postContent, existingRail);
+    const noteRail = footnoteResult.rail;
+    const pairs = withDisplayOrder([...annotationPairs, ...footnoteResult.pairs]);
     buildMobileNotes(postContent, pairs);
+    if (!noteRail) return;
 
     const desktopMode = window.matchMedia(DESKTOP_QUERY).matches;
     if (!desktopMode) {
@@ -118,6 +223,11 @@
       .map((pair) => {
         const anchorRect = pair.anchor.getBoundingClientRect();
         const anchorTop = anchorRect.top - postRect.top + postContent.scrollTop;
+        if (pair.variant === FOOTNOTE_VARIANT) {
+          const anchorMidpoint = anchorRect.left + anchorRect.width / 2;
+          const postMidpoint = postRect.left + postRect.width / 2;
+          pair.note.dataset.side = anchorMidpoint >= postMidpoint ? "right" : "left";
+        }
         return { anchorTop, note: pair.note };
       })
       .sort((a, b) => a.anchorTop - b.anchorTop);

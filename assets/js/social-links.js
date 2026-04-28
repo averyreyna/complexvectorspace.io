@@ -9,11 +9,6 @@
       url: "https://www.are.na/avery-reyna",
     },
     {
-      label: "Instagram",
-      icon: "photo_camera",
-      url: "https://instagram.com/selfadjointoperator",
-    },
-    {
       label: "GitHub",
       icon: "code",
       url: "https://github.com/averyreyna",
@@ -22,6 +17,11 @@
       label: "Google Scholar",
       icon: "school",
       url: "https://scholar.google.com/citations?user=WecCIHwAAAAJ&hl=en",
+    },
+    {
+      label: "Instagram",
+      icon: "photo_camera",
+      url: "https://instagram.com/selfadjointoperator",
     },
     {
       label: "LinkedIn",

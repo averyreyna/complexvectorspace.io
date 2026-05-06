@@ -1,8 +1,38 @@
 [
   {
+    "title": "Drag-and-Drop Not Considered Harmful",
+    "permalink": "/posts/drag-and-drop-not-considered-harmful/",
+    "content": "Placeholder text — this post is a companion to the talk of the same name. The full write-up will live here once it's ready.",
+    "date": "May 5, 2026"
+  },
+  {
     "title": "printf(\"Hello, World!\");",
     "permalink": "/posts/hello-world/",
-    "content": "I've been meaning to officially offload some of my more structured thoughts and put them into an organized, structured location. I've tried my fair share of blogging platforms (Medium and Bear Blog mostly) and none of them really stuck, but I want to take one final shot at documenting what I'm learning and why I find it interesting—although the fact I'm dedicating time to write a piece on said learnings demonstrates this interest.",
+    "content": "I've been meaning to officially offload some of my more structured thoughts and put them into an organized, structured location. I've tried my fair share of blogging platforms (Medium and Bear Blog mostly) and none of them really stuck, but I want to take one final shot at documenting what I'm learning and why I find it interesting.",
     "date": "April 5, 2026"
+  },
+  {
+    "title": "The Threat of Artificial Intelligence Is Not Just Real, It's Here",
+    "permalink": "/posts/the-threat-of-ai/",
+    "content": "The technologies of generative artificial intelligence and large language models, and their associated algorithms, are increasingly shaping our everyday lives. Avery Reyna argues that the constant need to develop groundbreaking technologies will turn these seemingly abstract algorithmic harms into real-life consequences felt by everyone across the globe.",
+    "date": "March 29, 2023"
+  },
+  {
+    "title": "Interdisciplinary Social Science and the Limits of Quantitative Research",
+    "permalink": "/posts/interdisciplinary-social-science/",
+    "content": "The last couple of decades has seen growing debate about the nature and purpose of quantitative analysis in the social sciences. From machine learning models to natural language processing, these novel methods are driving major advances. Yet, when conducted alongside work from other fields, such as mathematics or computer science, these new methods may constrain the approaches that have, until now, been vital to the social sciences. Qualitative analysis, so central to social science research, may begin to merge with more abstract methods. So where does that leave us?",
+    "date": "October 25, 2022"
+  },
+  {
+    "title": "Integrated Data in the United States: A Look at New York's Workforce Portal",
+    "permalink": "/posts/integrated-data-in-the-us/",
+    "content": "Integrated data platforms allow users to consolidate data from multiple sources to provide up-to-date, complete, and accurate data for processes like data analytics and visualization, business intelligence, and cross-programmatic learnings. As a case study, the NYC Workforce Data Platform demonstrates the way interoperable platforms and data can be used to better serve a city's workforce, and how such platforms can be adapted and scaled across regions and sectors.",
+    "date": "May 13, 2022"
+  },
+  {
+    "title": "Latin America’s Vaccination Efforts: What to Know",
+    "permalink": "/posts/what-to-know/",
+    "content": "Latin America has been hit hard by the COVID-19 pandemic, with reported cases and deaths soaring in recent months, especially in Brazil. Vaccination efforts have faced multiple roadblocks, including limited domestic production, controversy over vaccines from China and Russia, and difficult negotiations with U.S. and European manufacturers. Some experts worry vaccine diplomacy by Beijing and Moscow is expanding geopolitical influence, while others warn slow vaccination rates increase the risk of more dangerous variants.",
+    "date": "May 20, 2021"
   }
 ]

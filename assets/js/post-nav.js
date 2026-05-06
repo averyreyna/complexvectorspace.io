@@ -23,12 +23,12 @@
 
       var html = '';
       if (prevPost) {
-        html += '<a class="post-nav-prev" href="' + prevPost.permalink + '">← ' + escapeHtml(prevPost.title) + '</a>';
+        html += '<a class="post-nav-prev" href="' + prevPost.permalink + '"><span aria-hidden="true">←</span> ' + escapeHtml(prevPost.title) + '</a>';
       } else {
         html += '<span class="post-nav-prev"></span>';
       }
       if (nextPost) {
-        html += '<a class="post-nav-next" href="' + nextPost.permalink + '">' + escapeHtml(nextPost.title) + ' →</a>';
+        html += '<a class="post-nav-next" href="' + nextPost.permalink + '">' + escapeHtml(nextPost.title) + ' <span aria-hidden="true">→</span></a>';
       } else {
         html += '<span class="post-nav-next"></span>';
       }
